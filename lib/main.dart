@@ -1,3 +1,5 @@
+import 'package:booking_app/data/src/img_string.dart';
+import 'package:booking_app/presentation/widget/disable_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Booking App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          fontFamily: 'Poppins'),
+      home: const MyHomePage(title: 'Booking App'),
     );
   }
 }
@@ -54,6 +56,13 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            DisableButton(
+              onPressed: () {},
+              text: 'Download',
+              width: 120,
+              type: DisableButtonType.type3,
+            ),
+            Image.asset(ImgString.cittaStanding),
           ],
         ),
       ),
