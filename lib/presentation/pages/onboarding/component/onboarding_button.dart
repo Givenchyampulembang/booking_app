@@ -1,6 +1,7 @@
-import 'package:booking_app/domain/extension/extension.dart';
 import 'package:booking_app/presentation/widget/primary_button.dart';
 import 'package:booking_app/presentation/widget/secondary_button.dart';
+import 'package:booking_app/utils/extension/double_extension.dart';
+import 'package:booking_app/utils/extension/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

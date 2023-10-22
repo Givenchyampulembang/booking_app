@@ -1,6 +1,7 @@
 import 'package:booking_app/config/config.dart';
 import 'package:booking_app/config/theme/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
@@ -26,8 +27,8 @@ class PrimaryButton extends StatelessWidget {
 
   Widget _type1() {
     return SizedBox(
-      width: width,
-      height: 24,
+      width: width.w,
+      height: 24.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -48,8 +49,8 @@ class PrimaryButton extends StatelessWidget {
 
   Widget _type2() {
     return SizedBox(
-      width: width,
-      height: 32,
+      width: width.w,
+      height: 32.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -70,8 +71,8 @@ class PrimaryButton extends StatelessWidget {
 
   Widget _type3() {
     return SizedBox(
-      width: width,
-      height: 40,
+      width: width.w,
+      height: 40.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
