@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
       {Key? key,
-      this.type = PrimaryButtonType.type1,
+      this.type = PrimaryButtonType.type3,
       required this.onPressed,
       required this.text,
       this.width = 78})
@@ -37,7 +37,7 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Download',
+          text,
           style: AppFont.componentSmall.copyWith(
             color: AppColor.ink06,
           ),
@@ -59,7 +59,7 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Download',
+          text,
           style: AppFont.componentMediumBold.copyWith(
             color: AppColor.ink06,
           ),
@@ -81,7 +81,7 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Download',
+          text,
           style: AppFont.componentLarge.copyWith(
             color: AppColor.ink06,
           ),

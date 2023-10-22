@@ -39,7 +39,7 @@ class DisableButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Disable Small',
+          text,
           style: AppFont.componentSmall.copyWith(
             color: AppColor.ink02,
           ),
@@ -61,7 +61,7 @@ class DisableButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Disable Button',
+          text,
           style: AppFont.componentMediumBold.copyWith(
             color: AppColor.ink02,
           ),
@@ -83,7 +83,7 @@ class DisableButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Disable Large',
+          text,
           style: AppFont.componentLarge.copyWith(
             color: AppColor.ink02,
           ),
