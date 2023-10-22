@@ -55,6 +55,9 @@ class AppFont {
   static TextStyle get componentMedium => const TextStyle(
       fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
 
+  static TextStyle get componentSmall => const TextStyle(
+      fontSize: 12, fontWeight: FontWeight.w600, color: Colors.black);
+
   static TextStyle get h0 => const TextStyle(
       fontSize: 72, fontWeight: FontWeight.w700, color: Colors.black);
 
