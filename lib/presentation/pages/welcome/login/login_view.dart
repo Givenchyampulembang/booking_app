@@ -1,3 +1,4 @@
+import 'package:booking_app/config/theme/app_color.dart';
 import 'package:booking_app/presentation/pages/welcome/login/component/login_footer.dart';
 import 'package:booking_app/presentation/pages/welcome/login/component/login_form.dart';
 import 'package:booking_app/presentation/pages/welcome/login/component/login_image.dart';
@@ -22,6 +23,7 @@ class LoginPage extends StatelessWidget {
     final cubit = BlocProvider.of<LoginCubit>(context);
 
     return Scaffold(
+      backgroundColor: AppColor.ink06,
       resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: Column(
