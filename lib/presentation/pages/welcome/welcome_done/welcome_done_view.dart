@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'welcome_done_cubit.dart';
-import 'welcome_done_state.dart';
 
-class Welcome_donePage extends StatelessWidget {
+class WelcomeDonePage extends StatelessWidget {
+  const WelcomeDonePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -19,5 +20,3 @@ class Welcome_donePage extends StatelessWidget {
     return Container();
   }
 }
-
-
