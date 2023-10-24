@@ -22,4 +22,7 @@ class ImgString {
   static const String cittaStanding = 'assets/images/Città Standing.png';
   static const String cittaStanding1 = 'assets/images/Città Standing-1.png';
   static const String cittaStanding2 = 'assets/images/Città Standing-2.png';
+  static const String cittaAvatar = 'assets/images/Città Avatar.png';
+  static const String cittaAvatar1 = 'assets/images/Città Avatar-1.png';
+  static const String cittaAvatar2 = 'assets/images/Città Avatar-2.png';
 }

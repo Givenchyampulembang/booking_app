@@ -22,6 +22,8 @@ class AppDimen {
   static double w36 = 36.0.w;
   static double w38 = 38.0.w;
   static double w40 = 40.0.w;
+  static double w48 = 48.0.w;
+  static double w49 = 49.0.w;
 
   //HEIGHT
   static double h2 = 2.0.h;
@@ -44,4 +46,7 @@ class AppDimen {
   static double h36 = 36.0.h;
   static double h38 = 38.0.h;
   static double h40 = 40.0.h;
+  static double h49 = 49.0.h;
+  static double h60 = 60.0.h;
+  static double h73 = 73.0.h;
 }
