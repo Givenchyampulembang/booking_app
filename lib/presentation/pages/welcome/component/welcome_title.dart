@@ -1,5 +1,4 @@
 import 'package:booking_app/config/config.dart';
-import 'package:booking_app/config/theme/app_dimen.dart';
 import 'package:booking_app/utils/extension/double_extension.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +18,7 @@ class WelcomeTitle extends StatelessWidget {
             style: AppFont.h3,
           ),
           Text(
-            "Copy We've helped millions across the nation find their perfect match... and you're next!",
+            "We've helped millions across the nation find their perfect match... and you're next!",
             style: AppFont.paragraphMedium,
           ),
         ],
