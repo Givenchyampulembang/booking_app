@@ -1,4 +1,4 @@
-import 'package:booking_app/presentation/pages/discover/favorite/favorite_view.dart';
+import 'package:booking_app/presentation/pages/detail/detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
                 fontFamily: 'Poppins'),
-            home: FavoritePage(),
+            home: DetailPage(),
           );
         });
   }

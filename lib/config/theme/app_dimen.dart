@@ -41,6 +41,7 @@ class AppDimen {
   static double h26 = 26.0.h;
   static double h28 = 28.0.h;
   static double h30 = 30.0.h;
+  static double h31 = 31.0.h;
   static double h32 = 32.0.h;
   static double h34 = 34.0.h;
   static double h36 = 36.0.h;
