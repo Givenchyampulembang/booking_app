@@ -2,7 +2,7 @@ import 'package:booking_app/presentation/pages/discover/trips/component/trips_ot
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'component/trips_your_rommies.dart';
+import 'component/trips_your_roomies.dart';
 import 'trips_cubit.dart';
 
 class TripsPage extends StatelessWidget {
