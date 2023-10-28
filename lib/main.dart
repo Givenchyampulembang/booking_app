@@ -1,4 +1,4 @@
-import 'package:booking_app/presentation/pages/discover/discover_view.dart';
+import 'package:booking_app/presentation/pages/welcome/login/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logging/logging.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
                 fontFamily: 'Poppins'),
-            home: DiscoverPage(),
+            home: LoginPage(),
           );
         });
   }

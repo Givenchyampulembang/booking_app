@@ -1,8 +1,9 @@
 import 'package:booking_app/config/config.dart';
-import 'package:booking_app/config/theme/app_dimen.dart';
+import 'package:booking_app/presentation/pages/welcome/login/login_cubit.dart';
 import 'package:booking_app/presentation/widget/primary_button.dart';
 import 'package:booking_app/utils/extension/double_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../widget/app_input_text.dart';
 
@@ -11,6 +12,7 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = BlocProvider.of<LoginCubit>(context);
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: AppDimen.w24,
@@ -22,14 +24,16 @@ class LoginForm extends StatelessWidget {
           16.0.height,
           AppInputText(
             label: 'Email',
+            controller: cubit.state.emailController,
           ),
           16.0.height,
           AppInputText(
             label: 'Password',
+            controller: cubit.state.passwordController,
           ),
           16.0.height,
           PrimaryButton(
-            onPressed: () {},
+            onPressed: cubit.login,
             text: 'Login',
             width: double.infinity,
             type: PrimaryButtonType.type3,

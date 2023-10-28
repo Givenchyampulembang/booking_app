@@ -10,7 +10,7 @@ class BaseResponse {
 
   BaseResponse.fromJson(dynamic json) {
     massage = json['massage'];
-    result = json['result'] != null ? Result.fromJson(json['result']) : null;
+    result = json["result"] != null ? Result.fromJson(json['result']) : null;
   }
   String? massage;
   Result? result;
