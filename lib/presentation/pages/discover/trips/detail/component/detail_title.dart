@@ -1,5 +1,5 @@
 import 'package:booking_app/config/config.dart';
-import 'package:booking_app/presentation/pages/detail/detail_cubit.dart';
+import 'package:booking_app/presentation/pages/discover/trips/detail/detail_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
