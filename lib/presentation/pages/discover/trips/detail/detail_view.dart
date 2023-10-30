@@ -1,13 +1,15 @@
 import 'package:booking_app/config/config.dart';
-import 'package:booking_app/presentation/pages/detail/component/detail_button.dart';
-import 'package:booking_app/presentation/pages/detail/component/detail_image.dart';
-import 'package:booking_app/presentation/pages/detail/component/detail_title.dart';
+import 'package:booking_app/presentation/pages/discover/trips/detail/component/detail_button.dart';
+import 'package:booking_app/presentation/pages/discover/trips/detail/component/detail_image.dart';
+import 'package:booking_app/presentation/pages/discover/trips/detail/component/detail_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'detail_cubit.dart';
 
 class DetailPage extends StatelessWidget {
+  const DetailPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
