@@ -26,7 +26,7 @@ class AuthController implements AuthRepository {
     _httpState.onEndRequest(url, method);
     if (response.statusCode < 500) {
       _httpState.onSuccessRequest(url, method);
-      baseResponse = BaseResponse.fromJson(jsonEncode(response.body));
+      baseResponse = BaseResponse.fromJson(jsonDecode(response.body));
     } else {
       _httpState.onErrorRequest(url, method);
       baseResponse = BaseResponse(massage: response.body);
@@ -52,11 +52,10 @@ class AuthController implements AuthRepository {
     if (response.statusCode < 500) {
       if (response.statusCode > 199 && response.statusCode < 300) {
         _httpState.onSuccessRequest(url, method);
-        baseResponse = BaseResponse.fromJson(jsonEncode(response.body));
       } else {
         _httpState.onErrorRequest(url, method);
       }
-      baseResponse = BaseResponse.fromJson(jsonEncode(response.body));
+      baseResponse = BaseResponse.fromJson(jsonDecode(response.body));
     } else {
       _httpState.onErrorRequest(url, method);
       baseResponse = BaseResponse(massage: response.body);
@@ -104,11 +103,10 @@ class AuthController implements AuthRepository {
     if (response.statusCode < 500) {
       if (response.statusCode > 199 && response.statusCode < 300) {
         _httpState.onSuccessRequest(url, method);
-        baseResponse = BaseResponse.fromJson(jsonEncode(response.body));
       } else {
         _httpState.onErrorRequest(url, method);
       }
-      baseResponse = BaseResponse.fromJson(jsonEncode(response.body));
+      baseResponse = BaseResponse.fromJson(jsonDecode(response.body));
     } else {
       _httpState.onErrorRequest(url, method);
       baseResponse = BaseResponse(massage: response.body);

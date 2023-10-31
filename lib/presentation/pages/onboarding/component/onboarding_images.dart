@@ -15,7 +15,7 @@ class OnboardingImages extends StatelessWidget {
           cubit.state.onboardingList[i].image ?? "",
         ),
         itemCount: cubit.state.onboardingList.length,
-        onPageChanged: cubit.goTo,
+        onPageChanged: cubit.swiping,
       ),
     );
   }

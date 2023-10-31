@@ -1,6 +1,5 @@
+import 'package:booking_app/data/model/auth/login.dart';
 import 'package:booking_app/data/model/trip/trip.dart';
-
-import '../../data/model/auth/login.dart';
 
 class BaseResponse {
   BaseResponse({
@@ -10,7 +9,7 @@ class BaseResponse {
 
   BaseResponse.fromJson(dynamic json) {
     massage = json['massage'];
-    result = json["result"] != null ? Result.fromJson(json['result']) : null;
+    result = json['result'] != null ? Result.fromJson(json['result']) : null;
   }
   String? massage;
   Result? result;
@@ -51,12 +50,14 @@ class Result {
 
   Login? login;
   Trip? trip;
-  List<Trip>? yourRoomies = [];
-  List<Trip>? otherMatches = [];
+  List<Trip>? yourRoomies;
+  List<Trip>? otherMatches;
 
   Result copyWith({
     Login? login,
     Trip? trip,
+    List<Trip>? yourRoomies,
+    List<Trip>? otherMatches,
   }) =>
       Result(
         login: login ?? this.login,
@@ -64,4 +65,11 @@ class Result {
         yourRoomies: yourRoomies ?? this.yourRoomies,
         otherMatches: otherMatches ?? this.otherMatches,
       );
+
+  Map toJson() => {
+        'login': login,
+        'trip': trip?.toJson() ?? {},
+        'yourRoomies': yourRoomies?.map((e) => e.toJson()).toList() ?? [],
+        'otherMatches': otherMatches?.map((e) => e.toJson()).toList() ?? [],
+      };
 }
