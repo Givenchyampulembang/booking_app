@@ -1,4 +1,8 @@
+import 'package:booking_app/data/model/trip/trip.dart';
+
 class TripsState {
+  List<Trip> yourRoomies = [];
+  List<Trip> otherMatches = [];
   TripsState init() {
     return TripsState();
   }

@@ -12,7 +12,7 @@ class AuthController implements AuthRepository {
 
   @override
   Future<BaseResponse> forgotPassword(String email) async {
-    String method = 'POST';
+    String method = "POST";
     String url = EndPoint.forgotPassword;
     _httpState.onStartRequest(url, method);
 
@@ -36,7 +36,7 @@ class AuthController implements AuthRepository {
 
   @override
   Future<BaseResponse> login(String email, String password) async {
-    String method = 'POST';
+    String method = "POST";
     String url = EndPoint.login;
     _httpState.onStartRequest(url, method);
 
@@ -65,7 +65,7 @@ class AuthController implements AuthRepository {
 
   @override
   Future<void> logout() async {
-    String method = 'POST';
+    String method = "POST";
     String url = EndPoint.logout;
     _httpState.onStartRequest(url, method);
 
@@ -87,7 +87,7 @@ class AuthController implements AuthRepository {
   @override
   Future<BaseResponse> register(
       String email, String password, String name) async {
-    String method = 'POST';
+    String method = "POST";
     String url = EndPoint.register;
     _httpState.onStartRequest(url, method);
     late final BaseResponse baseResponse;

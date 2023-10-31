@@ -1,20 +1,21 @@
 import 'package:booking_app/config/theme/app_color.dart';
 import 'package:booking_app/config/theme/app_dimen.dart';
+import 'package:booking_app/data/model/trip/trip.dart';
 import 'package:booking_app/data/src/img_string.dart';
-import 'package:booking_app/presentation/pages/discover/trips/trips_cubit.dart';
 import 'package:booking_app/utils/extension/extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../config/theme/app_font.dart';
 
 class TripsYourRoomies extends StatelessWidget {
-  const TripsYourRoomies({super.key});
+  const TripsYourRoomies({Key? key, required this.yourRoomies})
+      : super(key: key);
+
+  final List<Trip> yourRoomies;
 
   @override
   Widget build(BuildContext context) {
-    final cubit = BlocProvider.of<TripsCubit>(context);
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,22 +23,22 @@ class TripsYourRoomies extends StatelessWidget {
           16.0.height,
           _header(),
           16.0.height,
-          _roomiesList(),
+          _roomiesList(context),
         ],
       ),
     );
   }
 
-  Widget _roomiesList() {
+  Widget _roomiesList(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemBuilder: (c, i) => _roomiesItem(),
-        itemCount: 3,
+        itemBuilder: (c, i) => _roomiesItem(yourRoomies[i]),
+        itemCount: yourRoomies.length,
       ),
     );
   }
 
-  Widget _roomiesItem() {
+  Widget _roomiesItem(Trip trip) {
     return Container(
       height: 72.0.h,
       margin: EdgeInsets.only(
@@ -66,17 +67,17 @@ class TripsYourRoomies extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'Given',
+                  trip.name ?? '',
                   style: AppFont.paragraphMediumBold,
                 ),
                 Text(
-                  'Jakarta, Indonesia',
+                  trip.location ?? '',
                   style: AppFont.paragraphSmall,
                 ),
               ],
             ),
           ),
-          Icon(Icons.arrow_forward_ios),
+          const Icon(Icons.arrow_forward_ios),
         ],
       ),
     );
@@ -98,7 +99,7 @@ class TripsYourRoomies extends StatelessWidget {
             child: CircleAvatar(
               radius: 26.w,
               backgroundColor: AppColor.ink06,
-              backgroundImage: AssetImage(ImgString.backdrop),
+              backgroundImage: const AssetImage(ImgString.backdrop),
             ),
           ),
         ],
@@ -120,12 +121,12 @@ class TripsYourRoomies extends StatelessWidget {
           const Expanded(child: SizedBox()),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             color: AppColor.ink02,
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.star),
+            icon: const Icon(Icons.star),
             color: AppColor.ink02,
           ),
         ],
