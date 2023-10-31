@@ -1,6 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:booking_app/config/config.dart';
+import 'package:booking_app/config/router/router.dart';
 import 'package:booking_app/domain/controller/auth_controller.dart';
+import 'package:booking_app/utils/helper/helper.dart';
+import 'package:get_it/get_it.dart';
 import 'package:logging/logging.dart';
 
 import 'login_state.dart';
@@ -12,6 +15,12 @@ class LoginCubit extends Cubit<LoginState> implements HttpState {
   void login() async {
     BaseResponse baseResponse = await _authController.login(
         state.emailController.text, state.passwordController.text);
+    PrefHelper.instance.saveToken(baseResponse.result?.login?.token ?? "");
+
+    Logger.root.info("TOKENKKU ${PrefHelper.instance.token}");
+    if (baseResponse.result?.login?.token != null) {
+      GetIt.I<AppRouter>().replace(const DiscoverRoute());
+    }
   }
 
   @override
