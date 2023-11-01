@@ -1,4 +1,6 @@
-import 'package:booking_app/config/router/app_router.dart';
+import 'package:booking_app/config/router/app_router.gr.dart';
+import 'package:booking_app/config/router/middleware/auth_guard.dart';
+import 'package:booking_app/config/router/middleware/first_install_guard.dart';
 import 'package:booking_app/utils/helper/pref_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,11 +10,14 @@ import 'package:logging/logging.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PrefHelper.instance.init();
-  GetIt.I.registerSingleton<AppRouter>(AppRouter());
+  GetIt.I.registerSingleton<AppRouter>(AppRouter(
+    firstInstallGuard: FirstInstallGuard(),
+    authGuard: AuthGuard(),
+  ));
 
-  Logger.root.level = Level.ALL;
+  Logger.root.level = Level.OFF;
   Logger.root.onRecord.listen((record) {
-    debugPrint(record.message);
+    // debugPrint(record.message);
   });
   runApp(const MyApp());
 }

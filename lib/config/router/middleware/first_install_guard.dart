@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:booking_app/config/router/app_router.dart';
+import 'package:booking_app/config/router/app_router.gr.dart';
 import 'package:booking_app/utils/helper/pref_helper.dart';
 
 class FirstInstallGuard extends AutoRouteGuard {
@@ -7,7 +7,7 @@ class FirstInstallGuard extends AutoRouteGuard {
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     bool isFirstInstall = PrefHelper.instance.isFirstInstall;
     if (isFirstInstall) {
-      router.replace(const OnboardingRoute());
+      resolver.next();
     } else {
       router.replace(const WelcomeRoute());
     }

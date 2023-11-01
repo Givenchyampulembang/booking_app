@@ -1,3 +1,4 @@
+import 'package:booking_app/config/networking/http_state.dart';
 import 'package:booking_app/config/theme/app_color.dart';
 import 'package:booking_app/config/theme/app_dimen.dart';
 import 'package:booking_app/config/theme/app_font.dart';
@@ -5,7 +6,7 @@ import 'package:booking_app/data/model/trip/trip.dart';
 import 'package:booking_app/data/src/img_string.dart';
 import 'package:booking_app/presentation/pages/discover/trips/trips_cubit.dart';
 import 'package:booking_app/utils/extension/double_extension.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,12 +29,21 @@ class TripsOtherMatches extends StatelessWidget {
   }
 
   Widget _roomiesList(BuildContext context) {
+    final cubit = BlocProvider.of<TripsCubit>(context);
     return Expanded(
-      child: ListView.builder(
-        itemBuilder: (c, i) => _roomiesItem(context, otherMatches[i]),
-        itemCount: otherMatches.length,
-        scrollDirection: Axis.horizontal,
-      ),
+      child: cubit.state.status == HttpStateStatus.loading
+          ? Center(
+              child: CupertinoActivityIndicator(),
+            )
+          : cubit.state.status == HttpStateStatus.error
+              ? const Center(
+                  child: Text("Something went wrong"),
+                )
+              : ListView.builder(
+                  itemBuilder: (c, i) => _roomiesItem(context, otherMatches[i]),
+                  itemCount: otherMatches.length,
+                  scrollDirection: Axis.horizontal,
+                ),
     );
   }
 
