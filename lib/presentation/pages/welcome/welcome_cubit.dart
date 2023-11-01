@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:booking_app/config/router/app_router.dart';
+import 'package:booking_app/config/router/app_router.gr.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logging/logging.dart';
 
@@ -16,6 +16,6 @@ class WelcomeCubit extends Cubit<WelcomeState> {
 
   void handleBtnLogin() {
     Logger.root.info("handleBtnLogin");
-    _appRouter.push(const LoginRoute());
+    _appRouter.replace(const LoginRoute());
   }
 }

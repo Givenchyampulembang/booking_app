@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:booking_app/config/config.dart';
-import 'package:booking_app/config/router/router.dart';
+import 'package:booking_app/config/router/app_router.gr.dart';
 import 'package:booking_app/domain/controller/auth_controller.dart';
 import 'package:booking_app/utils/helper/helper.dart';
 import 'package:get_it/get_it.dart';
