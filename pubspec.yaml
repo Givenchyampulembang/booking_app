@@ -3,7 +3,7 @@ description: Bootcamp Flutter Booking App
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.3 <4.0.0'
+  sdk: '>=3.1.5 <4.0.0'
 
 
 dependencies:
@@ -32,8 +32,30 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-      - assets/images/
-      - assets/locales/
+    - assets/images/
+    - assets/images/Citta-Standing.png
+    - assets/images/Citta-Standing-1.png
+    - assets/images/Citta-Standing-2.png
+    - assets/images/Citta-Avatar.png
+    - assets/images/Citta-Avatar-1.png
+    - assets/images/Citta-Avatar-2.png
+    - assets/images/Citta-Coffee-Shop.png
+    - assets/images/Citta-Coffee-Shop-1.png
+    - assets/images/Citta-Coffee-Shop-2.png
+    - assets/images/Citta-Giant-Phone.png
+    - assets/images/Citta-Giant-Phone-1.png
+    - assets/images/Citta-House.png
+    - assets/images/Citta-Living-Room.png
+    - assets/images/Citta-Living-Room-1.png
+    - assets/images/Citta-Party-Time.png
+    - assets/images/Citta-Party-Time-1.png
+    - assets/images/Citta-Plants.png
+    - assets/images/Citta-Plants-1.png
+    - assets/images/Citta-Plants-2.png
+    - assets/images/Citta-Plants-3.png
+    - assets/images/Citta-Plants-4.png
+    - assets/images/Citta-Plants-5.png
+    - assets/images/Citta-Avatar-and-Backdrop.png
 
   fonts:
     - family: Poppins
