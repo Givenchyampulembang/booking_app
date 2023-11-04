@@ -3,6 +3,7 @@ import 'package:booking_app/config/router/middleware/auth_guard.dart';
 import 'package:booking_app/config/router/middleware/first_install_guard.dart';
 import 'package:booking_app/utils/helper/pref_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logging/logging.dart';
@@ -19,6 +20,8 @@ void main() async {
   Logger.root.onRecord.listen((record) {
     // debugPrint(record.message);
   });
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(const MyApp());
 }
 
