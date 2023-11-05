@@ -32,8 +32,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-      - assets/images/
-      - assets/locales/
+    - assets/images/
+    - assets/images/Città-Standing.png
+    - assets/images/Città-Standing-1.png
+    - assets/images/Città-Standing-2.png
+    - assets/images/Città-Avatar-and-Backdrop.png
+    - assets/images/Città-Plants-2.png
+    - assets/images/Città-Plants.png
+
 
   fonts:
     - family: Poppins
